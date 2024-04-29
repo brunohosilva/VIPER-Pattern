@@ -40,7 +40,7 @@ class UserPresenter: AnyPresenter {
         case .success(let users):
             view?.update(with: users)
         case .failure:
-            view?.update(with: "algo deu errado")
+            view?.update(with: "algo deu errado!")
         }
     }
 }
