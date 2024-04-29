@@ -16,6 +16,7 @@
 		B644C59C2BDF0EB800F65E90 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644C59B2BDF0EB800F65E90 /* Presenter.swift */; };
 		B644C59E2BDF0EC900F65E90 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644C59D2BDF0EC900F65E90 /* Entity.swift */; };
 		B644C5A02BDF0ED400F65E90 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644C59F2BDF0ED400F65E90 /* Router.swift */; };
+		B644C5A42BDF2BAC00F65E90 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644C5A32BDF2BAC00F65E90 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B644C59B2BDF0EB800F65E90 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		B644C59D2BDF0EC900F65E90 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		B644C59F2BDF0ED400F65E90 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B644C5A32BDF2BAC00F65E90 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B644C59B2BDF0EB800F65E90 /* Presenter.swift */,
 				B644C59D2BDF0EC900F65E90 /* Entity.swift */,
 				B644C59F2BDF0ED400F65E90 /* Router.swift */,
+				B644C5A32BDF2BAC00F65E90 /* Factory.swift */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B644C5A42BDF2BAC00F65E90 /* Factory.swift in Sources */,
 				B644C5A02BDF0ED400F65E90 /* Router.swift in Sources */,
 				B644C59C2BDF0EB800F65E90 /* Presenter.swift in Sources */,
 				B644C5982BDF0E9100F65E90 /* View.swift in Sources */,
