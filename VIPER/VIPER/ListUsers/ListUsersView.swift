@@ -8,21 +8,15 @@
 import Foundation
 import UIKit
 
-// ViewController
-// protocol
-// reference presenter
+protocol UsersViewProtocol: AnyObject {
+    var presenter: UsersPresenterProtocol? { get set }
 
-protocol AnyView {
-    var presenter: AnyPresenter? { get set }
-    
     func update(with users: [User])
     func update(with error: String)
 }
 
-class UserViewController: UIViewController, AnyView, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    var presenter: AnyPresenter?
+class UsersViewController: UIViewController, UsersViewProtocol, UITableViewDelegate, UITableViewDataSource {
+    var presenter: UsersPresenterProtocol?
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -44,7 +38,7 @@ class UserViewController: UIViewController, AnyView, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(label)
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .red
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,7 +61,6 @@ class UserViewController: UIViewController, AnyView, UITableViewDelegate, UITabl
     }
     
     func update(with error: String) {
-        print("É PRA DAR RUIM")
         DispatchQueue.main.async {
             self.users = []
             self.label.text = error
@@ -86,5 +79,10 @@ class UserViewController: UIViewController, AnyView, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = users[indexPath.row].name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = users[indexPath.row]
+        presenter?.userSelected(userDetails: selectedUser)
     }
 }

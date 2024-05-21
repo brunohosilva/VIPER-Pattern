@@ -12,13 +12,13 @@ import Foundation
 // ref to presenter
 // api calls
 
-protocol AnyInteractor {
-    var presenter: AnyPresenter? { get set }
+protocol UsersInteractorProtocol {
+    var presenter: UsersPresenter? { get set }
     func getUsers()
 }
 
-class UserInteractor: AnyInteractor {
-    var presenter: AnyPresenter?
+class UsersInteractor: UsersInteractorProtocol {
+    var presenter: UsersPresenter?
     
     func getUsers() {
         print("UserInteractor getUsers")
